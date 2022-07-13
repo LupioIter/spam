@@ -13,12 +13,13 @@
         <form>
             <input type="text" id="message" placeholder="Your message">
         </form>
-        <button onclick="checkSpam(message)">Send</button>
+        <button onclick="checkSpam()">Send</button>
         <div id="posted_message"></div>
     </main>
     <script>
-        let message = document.getElementById("message").value;
-        function checkSpam(message) {
+
+        function checkSpam() {
+            let message = document.getElementById("message").value;
             let lowerMessage = message.toLowerCase();
             console.log(lowerMessage);
             if (lowerMessage.includes('viagra') || lowerMessage.includes('xxx')) {
