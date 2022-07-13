@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam</title>
+</head>
+
+<body>
+    <main>
+        <form>
+            <input type="text" id="message" placeholder="Your message">
+        </form>
+        <button onclick="checkSpam(message)">Send</button>
+        <div id="posted_message"></div>
+    </main>
+    <script>
+        let message = document.getElementById("message").value;
+        function checkSpam(message) {
+            let lowerMessage = message.toLowerCase();
+            console.log(lowerMessage);
+            if (lowerMessage.includes('viagra') || lowerMessage.includes('xxx')) {
+                let result = lowerMessage.replace("viagra" || "xxx", "***");
+                console.log(result);
+                posted_message.innerHTML = result;
+            } else {
+                console.log(message);
+                posted_message.innerHTML = message;
+            }
+        }
+    </script>
+</body>
+
+</html>
